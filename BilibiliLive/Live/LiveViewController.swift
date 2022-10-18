@@ -12,9 +12,9 @@ import Alamofire
 import SwiftyJSON
 
 class LiveViewController: UIViewController, BLTabBarContentVCProtocol {
-    var rooms = [LiveRoom]() { didSet {collectionVC.displayDatas=rooms} }
+    var rooms = [LiveRoom]() { didSet {collectionVC.displayData=rooms} }
     
-    let collectionVC = FeedCollectionViewController.create()
+    let collectionVC = FeedGirdViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionVC.show(in: self)
